@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_URI} !/public/
+    RewriteRule ^(.*)$ /mine-permit-laravel/public/$1 [R=302,L]
+</IfModule>

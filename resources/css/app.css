@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer utilities {
+    .font-oswald {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .carousel-dot {
+        width: 0.625rem;
+        height: 0.625rem;
+        border-radius: 9999px;
+        background-color: #d1d5db;
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-dot:hover {
+        background-color: #9ca3af;
+    }
+
+    .carousel-dot.active {
+        background-color: #00728f;
+    }
+
+    .accordion-content {
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-in-out;
+    }
+
+    .accordion-content.hidden {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .accordion-content.visible {
+        max-height: 500px;
+        opacity: 1;
+        overflow: visible;
+    }
+}
