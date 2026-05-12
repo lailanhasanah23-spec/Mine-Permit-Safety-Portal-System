@@ -20,6 +20,27 @@ Portal ini digunakan untuk mengelola pengajuan Mine Permit dan SIMPER secara ter
 - Integrasi: Google Drive API, Gmail API, Google Form sync.
 - Keamanan: Role-Based Access Control, transaksi database, pessimistic locking, lockout login.
 
+## Persiapan Lingkungan
+
+Untuk menjalankan proyek ini dengan stabil, siapkan:
+
+- PHP 8.3
+- Composer 2
+- Node.js 22
+- MySQL 8
+- Git
+
+Pastikan file `.env` diisi dari `.env.example`, lalu lengkapi minimal variabel berikut:
+
+- `APP_URL`
+- `DB_CONNECTION`, `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`
+- `MAIL_MAILER=gmail`
+- `GOOGLE_CLIENT_ID`
+- `GOOGLE_CLIENT_SECRET`
+- `ADMIN_EMAIL_WORKFLOW_ENABLED`
+- `ADMIN_EMAIL_FROM_ADDRESS`
+- `ADMIN_EMAIL_FROM_NAME`
+
 ## Dokumentasi
 
 Dokumentasi utama proyek tersedia di folder [docs](docs):
@@ -74,7 +95,7 @@ Perubahan terakhir sudah disiapkan untuk rilis dan pipeline GitHub Actions.
 - `vendor/bin/pint --test`
 - `npm run build`
 
-GitHub Actions saat ini menjalankan PHP 8.3, Node 20, `composer validate`, `composer install`, `npm ci`, migrasi SQLite in-memory, test suite, style check, analisis statis bila tersedia, dan build aset.
+GitHub Actions saat ini menjalankan PHP 8.3, Node 22, `composer validate`, `composer install`, `npm ci`, migrasi SQLite in-memory, test suite, style check, analisis statis bila tersedia, dan build aset.
 
 ## Catatan
 

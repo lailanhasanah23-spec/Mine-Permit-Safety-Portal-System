@@ -27,12 +27,11 @@ jobs:
           tools: composer:v2
           coverage: none
           ini-values: memory_limit=-1
-          cache: composer
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: npm
 
       - name: Validate Composer manifest
