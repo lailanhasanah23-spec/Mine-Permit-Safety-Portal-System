@@ -43,7 +43,8 @@ jobs:
         run: composer install --prefer-dist --no-interaction --no-progress
 
       - name: Install NPM dependencies
-        run: npm ci || npm install
+        run: |
+          npm install --include=optional --os=linux --cpu=x64
 
       - name: Prepare application environment
         run: cp .env.example .env
