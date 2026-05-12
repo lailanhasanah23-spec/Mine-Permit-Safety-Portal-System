@@ -16,7 +16,7 @@ Portal ini digunakan untuk mengelola pengajuan Mine Permit dan SIMPER secara ter
 
 - Backend: Laravel 13, PHP 8.3.
 - Database: MySQL 8.0.
-- Frontend: Vanilla CSS dengan komponen UI industrial.
+- Frontend: Tailwind CSS via Vite dengan komponen UI industrial kustom.
 - Integrasi: Google Drive API, Gmail API, Google Form sync.
 - Keamanan: Role-Based Access Control, transaksi database, pessimistic locking, lockout login.
 
@@ -74,7 +74,7 @@ Perubahan terakhir sudah disiapkan untuk rilis dan pipeline GitHub Actions.
 - `vendor/bin/pint --test`
 - `npm run build`
 
-GitHub Actions menjalankan PHP 8.3, install dependency, migrasi SQLite in-memory, test suite, style check, dan build aset.
+GitHub Actions saat ini menjalankan PHP 8.3, Node 20, `composer validate`, `composer install`, `npm ci`, migrasi SQLite in-memory, test suite, style check, analisis statis bila tersedia, dan build aset.
 
 ## Catatan
 
