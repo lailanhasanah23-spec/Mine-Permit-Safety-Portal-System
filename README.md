@@ -97,6 +97,8 @@ Perubahan terakhir sudah disiapkan untuk rilis dan pipeline GitHub Actions.
 
 GitHub Actions saat ini menjalankan PHP 8.3, Node 22, `composer validate`, `composer install`, `npm ci`, migrasi SQLite in-memory, test suite, style check, analisis statis bila tersedia, dan build aset.
 
+Migrasi yang bergantung pada sintaks MySQL dijaga tetap aman saat dijalankan di SQLite in-memory agar pipeline CI tetap konsisten.
+
 ## Catatan
 
 - Quick Access Login hanya untuk kebutuhan demo/pengujian.
